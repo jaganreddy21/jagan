@@ -1,0 +1,1423 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ibbtjPCabemW",
+        "outputId": "8827c576-9b66-452b-c875-86803e6fc174"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "First name: Asabeneh\n",
+            "First name length: 8\n",
+            "Last name:  Yetayeh\n",
+            "Last name length:  7\n",
+            "Country:  Finland\n",
+            "City:  Helsinki\n",
+            "Age:  250\n",
+            "Married:  True\n",
+            "Skills:  ['HTML', 'CSS', 'JS', 'React', 'Python']\n",
+            "Person information:  {'firstname': 'Asabeneh', 'lastname': 'Yetayeh', 'country': 'Finland', 'city': 'Helsinki'}\n",
+            "Asabeneh Yetayeh Helsink 250 True\n",
+            "First name: Asabeneh\n",
+            "Last name:  Yetayeh\n",
+            "Country:  Helsink\n",
+            "Age:  250\n",
+            "Married:  True\n"
+          ]
+        }
+      ],
+      "source": [
+        "first_name = 'Asabeneh'\n",
+        "last_name = 'Yetayeh'\n",
+        "country = 'Finland'\n",
+        "city = 'Helsinki'\n",
+        "age = 250\n",
+        "is_married = True\n",
+        "skills = ['HTML', 'CSS', 'JS', 'React', 'Python']\n",
+        "person_info = {\n",
+        "    'firstname':'Asabeneh',\n",
+        "    'lastname':'Yetayeh',\n",
+        "    'country':'Finland',\n",
+        "    'city':'Helsinki'\n",
+        "    }\n",
+        "\n",
+        "# Printing the values stored in the variables\n",
+        "\n",
+        "print('First name:', first_name)\n",
+        "print('First name length:', len(first_name))\n",
+        "print('Last name: ', last_name)\n",
+        "print('Last name length: ', len(last_name))\n",
+        "print('Country: ', country)\n",
+        "print('City: ', city)\n",
+        "print('Age: ', age)\n",
+        "print('Married: ', is_married)\n",
+        "print('Skills: ', skills)\n",
+        "print('Person information: ', person_info)\n",
+        "\n",
+        "# Declaring multiple variables in one line\n",
+        "\n",
+        "first_name, last_name, country, age, is_married = 'Asabeneh', 'Yetayeh', 'Helsink', 250, True\n",
+        "\n",
+        "print(first_name, last_name, country, age, is_married)\n",
+        "print('First name:', first_name)\n",
+        "print('Last name: ', last_name)\n",
+        "print('Country: ', country)\n",
+        "print('Age: ', age)\n",
+        "print('Married: ', is_married)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(first_name[0])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0Hae6DG_ctPp",
+        "outputId": "56364de3-a4d0-4685-cac9-8132642704e4"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "mutiple variables and assiging values to the variables in one"
+      ],
+      "metadata": {
+        "id": "ATZ3lO40c6rc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x,y,z,a,b,c='jagan',2,4,'raghav',5.00,3\n",
+        "print(x,y,z,a,b,c)\n",
+        "print(\"value of a:\", a)\n",
+        "print(\"value of b:\", b)\n",
+        "print(\"value of c:\", c)\n",
+        "print(\"value of x:\", x)\n",
+        "print(\"value of x:\", y)\n",
+        "print(\"value of x:\", z)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kD7g76Ewc8uv",
+        "outputId": "97d2135b-abb1-4e30-a6dc-a04753c3d875"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "jagan 2 4 raghav 5.0 3\n",
+            "value of a: raghav\n",
+            "value of b: 5.0\n",
+            "value of c: 3\n",
+            "value of x: jagan\n",
+            "value of x: 2\n",
+            "value of x: 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "people_info={\n",
+        "    'name':'rakesh',\n",
+        "    'age':40,\n",
+        "    'city':'ypalem',\n",
+        "    'collge':'nec',\n",
+        "    'branch':'cse'\n",
+        "\n",
+        "}\n",
+        "print(\"people_info:\",people_info)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "R-DGSzqTdV3W",
+        "outputId": "1c86068b-51d2-404c-92c7-f3b40d3cada5"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "people_info: {'name': 'rakesh', 'age': 40, 'city': 'ypalem', 'collge': 'nec', 'branch': 'cse'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Getting user input using the input() built-in function. Let us assign the data we get from a user into first_name and age variables. Example:"
+      ],
+      "metadata": {
+        "id": "60FlzlxreuRA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "user=input('enter name_')\n",
+        "print(user)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MK8fK15aeuFy",
+        "outputId": "63488d03-dd3f-40bf-ed78-937e8f61ffbb"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter name_raja\n",
+            "raja\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "8Bf2D1Xte2id"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "floats and complex numbers"
+      ],
+      "metadata": {
+        "id": "tiSWrOuQB-O6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('Floating Point Number, PI', 3.14)\n",
+        "print('Floating Point Number, gravity', 9.81)\n",
+        "\n",
+        "\n",
+        "# Floating numbers\n",
+        "print('Floating Point Number, PI', 3.14)\n",
+        "print('Floating Point Number, gravity', 9.81)\n",
+        "\n",
+        "\n",
+        "# Complex numbers\n",
+        "print('Complex number: ', 1 + 1j)\n",
+        "print('Multiplying complex numbers: ',(1 + 1j) * (1 - 1j))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EobOOrnueGQ7",
+        "outputId": "ba71b487-c24b-4454-b5f0-ac34cf377a94"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Floating Point Number, PI 3.14\n",
+            "Floating Point Number, gravity 9.81\n",
+            "Floating Point Number, PI 3.14\n",
+            "Floating Point Number, gravity 9.81\n",
+            "Complex number:  (1+1j)\n",
+            "Multiplying complex numbers:  (2+0j)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=10\n",
+        "print(\"way of the printed is:\",43)\n",
+        "print(\"way of printed us :\",a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OFRpF4zUCJeN",
+        "outputId": "f68ca565-98fc-4020-8744-64c7b3579f70"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "way of the printed is: 43\n",
+            "way oof printed us : 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "tDnAPdPECj95"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "\n",
+        "Arithmetic Operators:\n",
+        "\n",
+        "Addition(+): a + b:returs int\n",
+        "\n",
+        "Subtraction(-): a - b:return\n",
+        "\n",
+        "Multiplication(*): a * b\n",
+        "\n",
+        "Division(/): a / b\n",
+        "\n",
+        "Modulus(%): a % b\n",
+        "\n",
+        "Floor division(//): a // b\n",
+        "\n",
+        "Exponentiation(**): a ** b\n"
+      ],
+      "metadata": {
+        "id": "fbCoTWSgC2z6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#basic examples\n",
+        "a,b=20,5\n",
+        "c=a+b\n",
+        "print(\"value of c:\",c)\n",
+        "print(\"print the addition of two number:\",a+b)\n",
+        "print(\"print the multiplication of two number:\",a*b)\n",
+        "print(\"printed the sub of two numbers:\",a-b)\n",
+        "print(\"divison of two variables:\",a/b)  #here a and b values of 20,5 quotient 4 gives that in the form 4.0\n",
+        "print(\"mouduls of two number\",a%b) #there a and b values of 20,5 remainder is 0\n",
+        "print(\"floor division:\",a//b) #here a and b values of 20,5 quotient 4 gives that not in the form flaot like 4,5,6"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7zTili-2C2gJ",
+        "outputId": "b108c027-aea7-4ee1-d7e1-5a144bebf4bb"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "value of c: 25\n",
+            "print the addition of two number: 25\n",
+            "print the multiplication of two number: 100\n",
+            "printed the sub of two numbers: 15\n",
+            "divison of two variables: 4.0\n",
+            "mouduls of two number 0\n",
+            "floor division: 4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "user input"
+      ],
+      "metadata": {
+        "id": "cCMt3QuRFDyo"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "whnever you divide with variables we will get output only float representations"
+      ],
+      "metadata": {
+        "id": "44fsbVbsJC2i"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=float(input(\"enter the a value: \"))\n",
+        "b=float(input(\"enter the b value: \"))\n",
+        "c=a+b\n",
+        "if c==20:\n",
+        "  print(\"the value of:\",c)\n",
+        "else:\n",
+        "  print(\"nothing:\",a,b)\n",
+        "print(\"value of c:\",c)\n",
+        "print(\"print the addition of two number:\",a+b)\n",
+        "print(\"print the multiplication of two number:\",a*b)\n",
+        "print(\"printed the sub of two numbers:\",a-b)\n",
+        "print(\"divison of two variables:\",a/b)#  #here a and b values of 10,2 quotient 5.0 gives that in the form 4.0\n",
+        "print(\"mouduls of two number\",a%b)##there a and b values of 10,2 remainder is 0\n",
+        "print(\"floor division:\",a//b)##here a and b values of 10,2 quotient 5 gives that not in the form flaot like 4,5,6"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "n7GJRsZUFDUq",
+        "outputId": "c12f1cbf-18ff-45b9-9c84-5ec75949b1ab"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the a value: 10\n",
+            "enter the b value: 20\n",
+            "nothing: 10.0 20.0\n",
+            "value of c: 30.0\n",
+            "print the addition of two number: 30.0\n",
+            "print the multiplication of two number: 200.0\n",
+            "printed the sub of two numbers: -10.0\n",
+            "divison of two variables: 0.5\n",
+            "mouduls of two number 10.0\n",
+            "floor division: 0.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "whenver you pass variable as a input is str it will perform addition because of concatenation remains will not understand we will not get output is concatenation"
+      ],
+      "metadata": {
+        "id": "OUUwul7cHURW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=str(input(\"enter the a value: \"))\n",
+        "b=str(input(\"enter the b value: \"))\n",
+        "c=a+b\n",
+        "if c==20:\n",
+        "  print(\"the value of:\",c)\n",
+        "else:\n",
+        "  print(\"nothing:\",a,b)\n",
+        "print(\"value of c:\",c)\n",
+        "print(\"print the addition of two number:\",a+b)\n",
+        "print(\"print the multiplication of two number:\",a*b)\n",
+        "print(\"printed the sub of two numbers:\",a-b)\n",
+        "print(\"divison of two variables:\",a/b)#  #here a and b values of 10,2 quotient 5.0 gives that in the form 4.0\n",
+        "print(\"mouduls of two number\",a%b)##there a and b values of 10,2 remainder is 0\n",
+        "print(\"floor division:\",a//b)##here a and b values of 10,2 quotient 5 gives that not in the form flaot like 4,5,6"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 331
+        },
+        "id": "jVumO-BSG8_M",
+        "outputId": "ed395978-0d75-43f2-b3a8-7ed143d708f7"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the a value: '5'\n",
+            "enter the b value: '6'\n",
+            "nothing: '5' '6'\n",
+            "value of c: '5''6'\n",
+            "print the addition of two number: '5''6'\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "TypeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-18-97a145725d5d>\u001b[0m in \u001b[0;36m<cell line: 10>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      8\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"value of c:\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0mc\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      9\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"print the addition of two number:\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0ma\u001b[0m\u001b[0;34m+\u001b[0m\u001b[0mb\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 10\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"print the multiplication of two number:\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0ma\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0mb\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     11\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"printed the sub of two numbers:\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0ma\u001b[0m\u001b[0;34m-\u001b[0m\u001b[0mb\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     12\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"divison of two variables:\"\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0ma\u001b[0m\u001b[0;34m/\u001b[0m\u001b[0mb\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;31m#  #here a and b values of 10,2 quotient 5.0 gives that in the form 4.0\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mTypeError\u001b[0m: can't multiply sequence by non-int of type 'str'"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "only one single int variable then remaining all variables float output is the float representations"
+      ],
+      "metadata": {
+        "id": "3T-3M3ytIapq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=10\n",
+        "\n",
+        "y=20.0\n",
+        "print(x+y)\n",
+        "print(type(a+b))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "pjwESPgSIovx",
+        "outputId": "1dbd1edf-8235-4beb-da1a-ef43cf3f71a8"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "30.0\n",
+            "<class 'float'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=int(input(\"enter the a value: \"))\n",
+        "b=float(input(\"enter the b value: \"))\n",
+        "c=a+b\n",
+        "if c==20:\n",
+        "  print(\"the value of:\",c)\n",
+        "else:\n",
+        "  print(\"nothing:\",a,b)\n",
+        "print(\"value of c:\",c)\n",
+        "print(\"print the addition of two number:\",a+b)\n",
+        "print(\"print the multiplication of two number:\",a*b)\n",
+        "print(\"printed the sub of two numbers:\",a-b)\n",
+        "print(\"divison of two variables:\",a/b)#  #here a and b values of 10,2 quotient 5.0 gives that in the form 4.0\n",
+        "print(\"mouduls of two number\",a%b)##there a and b values of 10,2 remainder is 0\n",
+        "print(\"floor division:\",a//b)##here a and b values of 10,2 quotient 5 gives that not in the form flaot like 4,5,619"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1e3GnjL3GAJY",
+        "outputId": "580b2d64-2aab-4723-c484-500850f35a7b"
+      },
+      "execution_count": 20,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the a value: 10\n",
+            "enter the b value: 10.0\n",
+            "the value of: 20.0\n",
+            "value of c: 20.0\n",
+            "print the addition of two number: 20.0\n",
+            "print the multiplication of two number: 100.0\n",
+            "printed the sub of two numbers: 0.0\n",
+            "divison of two variables: 1.0\n",
+            "mouduls of two number 0.0\n",
+            "floor division: 1.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Arithmetic Operators:\n",
+        "Addition(+): a + b\n",
+        "Subtraction(-): a - b\n",
+        "Multiplication(*): a * b\n",
+        "Division(/): a / b\n",
+        "Modulus(%): a % b\n",
+        "Floor division(//): a // b\n",
+        "Exponentiation(**): a ** b"
+      ],
+      "metadata": {
+        "id": "lf8331X-CmGR"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 3 # a is a variable name and 3 is an integer data type\n",
+        "b = 2 # b is a variable name and 3 is an integer data type\n",
+        "\n",
+        "# Arithmetic operations and assigning the result to a variable\n",
+        "total = a + b\n",
+        "diff = a - b\n",
+        "product = a * b\n",
+        "division = a / b\n",
+        "remainder = a % b\n",
+        "floor_division = a // b\n",
+        "exponential = a ** b\n",
+        "\n",
+        "# I should have used sum instead of total but sum is a built-in function - try to avoid overriding built-in functions\n",
+        "print(total) # if you do not label your print with some string, you never know where the result is coming from\n",
+        "print('a + b = ', total)\n",
+        "print('a - b = ', diff)\n",
+        "print('a * b = ', product)\n",
+        "print('a / b = ', division)\n",
+        "print('a % b = ', remainder)\n",
+        "print('a // b = ', floor_division)\n",
+        "print('a ** b = ', exponential)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "17919qfyMJfm",
+        "outputId": "e5a0052a-f138-4397-fdd6-9f26bac266ad"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n",
+            "a + b =  5\n",
+            "a - b =  1\n",
+            "a * b =  6\n",
+            "a / b =  1.5\n",
+            "a % b =  1\n",
+            "a // b =  1\n",
+            "a ** b =  9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=20.0\n",
+        "\n",
+        "y=20\n",
+        "print(x+y)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dVE72T1FIRCB",
+        "outputId": "5b6980c0-df35-4a95-8701-9526da94878d"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "40.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "assignment\n",
+        "\n",
+        "whever work the floor 9//10 =10 like smallest/highest we can't perform=0.0 here means one thing notice highest//smallest gives the value\n",
+        "\n",
+        "if you use the one float value and another one int results will be float"
+      ],
+      "metadata": {
+        "id": "qs8IVfaPWk-_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x=5\n",
+        "x+=3\n",
+        "print(\"assigment add:\",x)\n",
+        "x=x-3\n",
+        "print('assigment sub:',x)\n",
+        "x=x*5\n",
+        "print(\"assigment mul\",x)\n",
+        "x=x/5\n",
+        "print(\"assigment of div:\",+x)\n",
+        "x=x%5\n",
+        "print(\"assigment of mouduls\",+x)\n",
+        "b=10\n",
+        "b=b//2\n",
+        "print(\"assign floor:\",b)\n",
+        "x=x//6\n",
+        "print(\"asign floor:\",x)\n",
+        "print(x//10)\n",
+        "print(20//10)\n",
+        "print(30//10.5)#10.5)30(2.0#one float divide it gives float output\n",
+        "print(30/10.0)\n",
+        "print(3/5) #important one over here\n",
+        "print(2/2) #all most important float\n",
+        "                     #21"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hioz-W2LWnRu",
+        "outputId": "9ee24905-536e-40ba-fd42-b27a7baf770a"
+      },
+      "execution_count": 70,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "assigment add: 8\n",
+            "assigment sub: 5\n",
+            "assigment mul 25\n",
+            "assigment of div: 5.0\n",
+            "assigment of mouduls 0.0\n",
+            "assign floor: 5\n",
+            "asign floor: 0.0\n",
+            "0.0\n",
+            "2\n",
+            "2.0\n",
+            "3.0\n",
+            "0.6\n",
+            "1.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Calculating area of a circle\n",
+        "radius = 10                                 # radius of a circle\n",
+        "area_of_circle = 3.14 * radius ** 2         # two * sign means exponent or power\n",
+        "print('Area of a circle:', area_of_circle)\n",
+        "\n",
+        "# Calculating area of a rectangle\n",
+        "length = 10\n",
+        "width = 20\n",
+        "area_of_rectangle = length * width\n",
+        "print('Area of rectangle:', area_of_rectangle)\n",
+        "\n",
+        "# Calculating a weight of an object\n",
+        "mass = 75\n",
+        "gravity = 9.81\n",
+        "weight = mass * gravity\n",
+        "print(weight, 'N')\n",
+        "print(weight,'Np')    #i have right                    # Adding unit to the weight\n",
+        "\n",
+        "# Calculate the density of a liquid\n",
+        "mass = 75 # in Kg\n",
+        "volume = 0.075 # in cubic meter\n",
+        "density = mass / volume # 1000 Kg/m^3\n",
+        "print(density)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "B4pEzdBBZ21i",
+        "outputId": "0b62a697-12d9-46d7-8375-89c68b4d4acc"
+      },
+      "execution_count": 75,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Area of a circle: 314.0\n",
+            "Area of rectangle: 200\n",
+            "735.75 N\n",
+            "735.75 Np\n",
+            "1000.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "comparsion operators in python output gives only True or false"
+      ],
+      "metadata": {
+        "id": "oFpXu89teXsp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=int(input(\"ente the value: \"))\n",
+        "b=int(input(\"enter the value: \"))\n",
+        "print(\"a>b\",a>b)\n",
+        "print(\"a==b\",a==b)\n",
+        "\n",
+        "print(\"a<b\",a<b)\n",
+        "print(\"a!=b\",a!=b)\n",
+        "print(\"a>=b\",a>=b)\n",
+        "print(\"a<=b\",a<=b)\n",
+        "print(3 > 2)     # True, because 3 is greater than 2\n",
+        "print(3 >= 2)    # True, because 3 is greater than 2\n",
+        "print(3 < 2)     # False,  because 3 is greater than 2\n",
+        "print(2 < 3)     # True, because 2 is less than 3\n",
+        "print(2 <= 3)    # True, because 2 is less than 3\n",
+        "print(3 == 2)    # False, because 3 is not equal to 2\n",
+        "print(3 != 2)    # True, because 3 is not equal to 2\n",
+        "print(len('mango') == len('avocado'))  # False\n",
+        "print(len('mango') != len('avocado'))  # True\n",
+        "print(len('mango') < len('avocado'))   # True\n",
+        "print(len('milk') != len('meat'))      # False\n",
+        "print(len('milk') == len('meat'))      # True\n",
+        "print(len('tomato') == len('potato'))  # True\n",
+        "print(len('python') > len('dragon'))   # False\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "j-pO-XLSdx9q",
+        "outputId": "79df13d0-ad22-49c4-a1b9-1421a859277e"
+      },
+      "execution_count": 87,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ente the value: 10\n",
+            "enter the value: 5\n",
+            "a>b True\n",
+            "a==b False\n",
+            "a<b False\n",
+            "a!=b True\n",
+            "a>=b True\n",
+            "a<=b False\n",
+            "True\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "True\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "basic comparsions just small things common sense from the comparsion operators"
+      ],
+      "metadata": {
+        "id": "s1vA3eBigmFK"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('True == True: ', True == True) # true is true=true,1\n",
+        "\n",
+        "print('True == False: ', True == False)#True and false =false ,0\n",
+        "print('False == False:', False == False) #false and =false ,o\n",
+        "print(10==10)\n",
+        "print(10==5)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DUoMphNygQz7",
+        "outputId": "a14e8e2e-de74-44f7-b38b-04b4ff37cac9"
+      },
+      "execution_count": 86,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True == True:  True\n",
+            "True == False:  False\n",
+            "False == False: True\n",
+            "True\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "logical\n",
+        "\n",
+        "Unlike other programming languages python uses keywords and, or and not for logical operators. Logical operators are used to combine conditional statements:\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "yWIynetHj_gg"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "RxK_rYGskSD1"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "_WPZq0N_kS2F"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=int(input(\"enter the value: \"))\n",
+        "b=int(input(\"enter the value: \"))\n",
+        "print(\"a>3 and b<10\",a>3 and b<10) #if both conditions true it gives True\n",
+        "print(\"a==4 and b<2\",a==4 and b<2)\n",
+        "print(a>=10 and b<=10)\n",
+        "#or\n",
+        "print(a>4 or b<10) #if any one condition is true it gives true\n",
+        "print(a>4 or b<0)\n",
+        "print(a>2 or b<20)\n",
+        "print(a>42 or b<10)\n",
+        "print(not  a>b)\n",
+        "print(a>b)\n",
+        "print('True' and 'True')\n",
+        "print('False' and 'True')\n",
+        "print('True' and 'False2')\n",
+        "print(not 'True')\n",
+        "print(not 'False2')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PxBILCmoj3PF",
+        "outputId": "d0ece150-6f80-4c69-dfed-b60df17118e1"
+      },
+      "execution_count": 101,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the value: 10\n",
+            "enter the value: 20\n",
+            "a>3 and b<10 False\n",
+            "a==4 and b<2 False\n",
+            "False\n",
+            "True\n",
+            "True\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "False\n",
+            "True\n",
+            "True\n",
+            "False2\n",
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "bitwise working for the bits & ,|,!"
+      ],
+      "metadata": {
+        "id": "zXWIv4ZWnwrP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=int(input(\"enter the value: \"))\n",
+        "b=int(input(\"enter the value: \"))\n",
+        "print(a|b\n",
+        "      )\n",
+        "print(a&b)\n",
+        "print(a^b)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "I2sBR3wQoCKB",
+        "outputId": "4f7a9842-1f88-4986-9776-3d5c70ddbcf9"
+      },
+      "execution_count": 111,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the value: 10\n",
+            "enter the value: 20\n",
+            "30\n",
+            "0\n",
+            "30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(20&21)\n",
+        "print(10&5)\n",
+        "print(10|5)\n",
+        "print(10^15)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AIOVHGCZzBv3",
+        "outputId": "7772432d-1ad3-4f34-add7-4fb6d0cb030f"
+      },
+      "execution_count": 113,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20\n",
+            "0\n",
+            "15\n",
+            "5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "0SSVgCgEzat0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "membership operators\n",
+        "\n",
+        "in: Returns True if the queried list contains a certain item(x in y)\n",
+        "\n",
+        "not in: Returns True if the queried list doesn't have a certain item(x in y)"
+      ],
+      "metadata": {
+        "id": "P5P-NKEJzb79"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#in\n",
+        "\n",
+        "list=[2,3,4]\n",
+        "print(2 in list)\n",
+        "set={1,2,3}\n",
+        "print(5 in set)\n",
+        "set1={\"apple\",\"angel\",\"accent\"}\n",
+        "print(\"apple\" in set1)\n",
+        "#not in\n",
+        "list1=[2,4,5,6]\n",
+        "print(7 not in list1)\n",
+        "print(2 not in list1)\n",
+        "print(\"apple\" not in set1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wzlyXRt1zltj",
+        "outputId": "a99de624-d673-499e-c285-6566f58f4e69"
+      },
+      "execution_count": 121,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "False\n",
+            "True\n",
+            "True\n",
+            "False\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "identify operators\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "is: Returns true if both variables are the same object(x is y)\n",
+        "\n",
+        "is not: Returns true if both variables are not the same object(x is not y)\n",
+        "\n",
+        "a=10,b=10 every variables hold the address of the variable just assume \"a\" address is 10000 but the\"b\" varibles just pointing the \"a\" variables address because we are using same data type\n",
+        "\n",
+        "just\n",
+        "a adrress 1000\n",
+        "b address 1000"
+      ],
+      "metadata": {
+        "id": "3Wb82LV91FVm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=10\n",
+        "b=10\n",
+        "print(\"a is b\",a is b)\n",
+        "print(id(a))\n",
+        "print(id(b))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uc1-rUH7zllB",
+        "outputId": "5411d802-6d65-4c6f-9c4f-5cae8516042e"
+      },
+      "execution_count": 129,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a is b True\n",
+            "135709273424400\n",
+            "135709273424400\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "a=10,b='10'\n",
+        "a variables adress 1357027324400\n",
+        "\n",
+        "\n",
+        "\n",
+        "a,b variables are not same data type\n",
+        "a,b variables different data types then address pointing different a,b variables\n",
+        "\n",
+        "\n",
+        "b varibles address 135709266004272"
+      ],
+      "metadata": {
+        "id": "meGgvvCA2dW5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=10\n",
+        "b='10'\n",
+        "print(a is b)\n",
+        "print(id(a))\n",
+        "print(id(b))\n",
+        "print(id(a)==id(b))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NMKYLIELzlh6",
+        "outputId": "7b5d8b30-f054-4afe-8eec-c59f286c11c6"
+      },
+      "execution_count": 132,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "135709273424400\n",
+            "135709266004272\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "is not"
+      ],
+      "metadata": {
+        "id": "WMsvQ5JH3fqz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "1t-fdjNl4Oi7"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "just checking variables same for the both variables\n",
+        "\n",
+        "c is not d just operation perform\n",
+        "\n",
+        "id is true"
+      ],
+      "metadata": {
+        "id": "lperiDRz4PKD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "c=20\n",
+        "d=20\n",
+        "print(c is not d)\n",
+        "print(id(c),id(d))\n",
+        "print(id(c)==id(d))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PgmR2Uk03Q5v",
+        "outputId": "c1f883cf-faca-4116-f2c3-467d705fb1a9"
+      },
+      "execution_count": 135,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "False\n",
+            "135709273424720 135709273424720\n",
+            "True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "zevrFr_G45EV"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "c,d variables different hold address diffrent"
+      ],
+      "metadata": {
+        "id": "mREIUe0s45oq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "c=20\n",
+        "d='20'\n",
+        "print(c is not d)\n",
+        "print(id(c),id(d))\n",
+        "print(id(c)==id(d))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lrBYhedA4vC0",
+        "outputId": "fc2158c3-42ee-4189-b6f4-e302cb8b899c"
+      },
+      "execution_count": 136,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "True\n",
+            "135709273424720 135707999896688\n",
+            "False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "here set1,set2 values are same bit memory address varies\n",
+        "gives diffrent address\n",
+        "\n",
+        "\n",
+        "here the list have values check address same value like 2,2 gives the same address\n"
+      ],
+      "metadata": {
+        "id": "A3iL432L5UL4"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "set1=(1,2,3)\n",
+        "set2=(1,2,3)\n",
+        "print(id(set1))\n",
+        "print(id(set2))\n",
+        "list=[2,2]\n",
+        "print(id(list[0]))\n",
+        "print(id(list[1]))\n",
+        "print(id(list[0]==id(list[1])))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lQYGwFIy5CMd",
+        "outputId": "454ed1b0-e41d-4929-fba0-26331a7222cd"
+      },
+      "execution_count": 142,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "135708001669504\n",
+            "135708001700736\n",
+            "135709273424144\n",
+            "135709273424144\n",
+            "99454317499392\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "kimeQr8y4tg5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "\n",
+        "\n",
+        "a=int(input(\"enter the value: \"))\n",
+        "b=int(input(\"enter the value: \"))\n",
+        "c=a+b\n",
+        "jagan='reddy'\n",
+        "if c==10:\n",
+        "  print(\"value of sum\",c)\n",
+        "\n",
+        "elif jagan=='Reddy':\n",
+        "  print(\"name of the \",jagan)\n",
+        "else:\n",
+        "  print(\"nothing will printed\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "f9pLUwlcm7UC",
+        "outputId": "55a4202a-6d2c-4dcd-d7fc-0a718c545897"
+      },
+      "execution_count": 107,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "enter the value: 20\n",
+            "enter the value: 40\n",
+            "nothing will printed\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
