@@ -1,0 +1,155 @@
+Easy Questions:
+1-Retrieve all columns for the place with Id 5.
+2-List all unique states present in the dataset.
+3-Count the total number of places in each Zone.
+4-Find the places with a Google review rating greater than 4.0.
+5-Retrieve the places where DSLR is allowed.
+
+Medium Questions:
+1-Calculate the average time needed to visit all places in each state.
+2-List the cities where the weekly off day is Sunday.
+3-Find the places with an entrance fee less than 200 INR and a Google review rating above 4.5.
+4-Count the number of places where an airport is present within a 50km radius.
+5-Update the Best Time to visit for the place with Id 8 to 'Winter'.
+
+Hard Questions:
+1-Find the top 5 places with the highest number of Google reviews.
+2-Calculate the total entrance fee collected for each state.
+3-Identify places where the establishment year is before 1800 or after 2000.
+4-Rank the places in each state based on Google review rating.
+5-List the places where the Significance is 'Historical' and the DSLR is allowed.
+6-Find the states with the highest and lowest average Google review ratings.
+7-Calculate the average entrance fee for places in each Zone.
+8-Identify the places that are closed on Mondays and have a Google review rating above 4.0.
+9-Update the Establishment Year for places with an odd Id to the current year.
+10-Calculate the percentage of places with an airport within a 50km radius for each state.
+
+
+select * from TopIndianPlacestoVisit
+Easy Questions:
+1-Retrieve all columns for the place with Id 
+
+select * from TopIndianPlacestoVisit
+select * from TopIndianPlacestoVisit
+where c1=5
+
+2-List all unique states present in the dataset.
+select distinct c3 from TopIndianPlacestoVisit
+select count(distinct c3 )from TopIndianPlacestoVisit
+
+3-Count the total number of places in each Zone.
+select c2,sum(c15) as total_zones from TopIndianPlacestoVisit
+group by c2
+select c2,count(c2) from TopIndianPlacestoVisit
+group by c2
+
+4-Find the places with a Google review rating greater than 4.0
+select * from TopIndianPlacestoVisit
+select c5,c6 ,c3,c3 from TopIndianPlacestoVisit
+where c8>=4.0
+
+5-Retrieve the places where DSLR is allowed.
+select c5,c6 ,c3 ,c14 from TopIndianPlacestoVisit
+where c14='Yes'
+
+
+medimum
+
+
+1-Calculate the average time needed to visit all places in each state.
+select c3,avg(c8) as average_time from TopIndianPlacestoVisit
+group by c3
+order by average_time desc
+
+2.List them cities where the weekly off day is Sunday
+select* from TopIndianPlacestoVisit
+select c4,c12 from TopIndianPlacestoVisit
+where c12 ='Sunday'
+
+3-Find the places with an entrance fee less than 200 INR and a Google review rating above 4.5.
+select c4 ,c10 from TopIndianPlacestoVisit
+
+where c10>200 and c9<4.5
+
+4-Count the number of places where an airport is present within a 50km radius.
+
+select count(c4) from TopIndianPlacestoVisit
+where c11='Yes'
+
+5-Update the Best Time to visit for the place with Id 8 to '.Winter'
+update TopIndianPlacestoVisit
+set c16='Winter'
+where c1=5
+select c1,c16 from TopIndianPlacestoVisit
+
+
+Hard Questions:
+1-Find the top 5 places with the highest number of Google reviews.
+
+select * from TopIndianPlacestoVisit
+select c4,c5,c9  from TopIndianPlacestoVisit
+order by c9 desc 
+limit 5
+
+Hard Questions:
+.
+2-Calculate the total entrance fee collected for each state.
+select sum(c10) as total_entrances_fess ,c3 from TopIndianPlacestoVisit
+group by c3
+order by total_entrances_fess desc
+
+3-Identify places where the establishment year is before 1800 or after 2000
+select *
+from TopIndianPlacestoVisit
+group by  c3
+select c4,c5,c6,c7 from TopIndianPlacestoVisit
+where c7<1800 or c7>
+
+4-Rank the places in each state based on Google review rating.
+select c3,c4,c5,c9,
+rank() over(partition by c5 order by c9 ) as rk
+from TopIndianPlacestoVisit
+
+
+5-List the places where the Significance is 'Historical' and the DSLR is allowed.
+
+select  c5,c4,c3 from TopIndianPlacestoVisit
+where c13='Historical' and c14='Yes'
+
+6-Find the states with the highest and lowest average Google review ratings.
+
+select * from TopIndianPlacestoVisit
+select c3,c9,avg(c9) as avg_reviews,
+avg(c9) over(partition by c3 order by c9 desc) as highest_average,
+avg(c9) over(partition by c3 order by c9 asc) as highest_average
+
+from TopIndianPlacestoVisit
+group by c3
+
+7-Calculate the average entrance fee for places in each Zone.
+select avg(c10) as avg_fees ,c2,c3,c4 from TopIndianPlacestoVisit
+group by c2
+order by avg_fees desc
+
+
+8-Identify the places that are closed on Mondays and have a Google review rating above 4.0.
+select * from TopIndianPlacestoVisit
+select c2,c3,c4,c5,c9,c12 from TopIndianPlacestoVisit
+where c12='Monday' and c9>=4.0
+
+9-Update the Establishment Year for places with an odd Id to the current year.
+update TopIndianPlacestoVisit
+set c7=year(getdate())
+where c1%2<>0
+
+10-Calculate the percentage of places with an airport within a 50km radius for each state.
+
+select* from TopIndianPlacestoVisit
+select c3,c4,c5,c11,c2 from TopIndianPlacestoVisit
+where  c11='Yes' 
+group by c2
+
+Dataset link- https://lnkd.in/gthuus8E
+
+
+
