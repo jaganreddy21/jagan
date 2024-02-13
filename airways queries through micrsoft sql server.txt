@@ -1,0 +1,118 @@
+select * from airways
+
+Easy Level:
+1-Retrieve all columns for reviews where the rating is greater than 4.
+select * from airways
+where rating>4
+2-Count the number of reviews in the dataset.
+select count(rating) number_of_reviews 
+from  airways
+
+3-Find the distinct aircraft models mentioned in the dataset.
+select count(distinct aircraft) from airways
+4-Get the reviews where the content contains the word 'excellent'.
+select * from airways
+where content like '%excellent%'
+
+select content,traveller_type from airways
+5-Find the average rating given to British Airways.
+
+select avg(rating) as average_rating from airways
+
+
+Medium Level:
+1-Retrieve the top 5 reviews with the highest ratings.
+
+select top 5 * from airways
+order by rating desc
+
+2-Count the number of reviews for each aircraft model.
+select aircraft,count(rating) as count_of_the_reviews from airways
+group by aircraft
+order by count_of_the_reviews desc
+
+select * from airways
+
+3-List the dates when the highest number of reviews were posted.
+
+
+select top 1 date,count(rating) as number_of_reviews from airways
+group by date
+order by number_of_reviews desc
+4-Find the average seat comfort rating for business class seats.
+select avg(rating) as avg_rating,seat_type from  airways
+where seat_type='Business Class'
+group by seat_type
+5-Identify the most common traveler type in the dataset.
+select traveller_type,count(traveller_type) as number_of_traveller_types from airways
+where traveller_type is not null
+group by traveller_type
+order by number_of_traveller_types  desc
+
+
+Hard Level:
+1-Calculate the average ratings for each aircraft model.
+
+select avg(rating) as avg_rating,aircraft from airways
+group by aircraft
+order by avg_rating desc
+2-List the top 3 places with the highest average ratings.
+select top 3 avg(rating) as avg_ratings ,place from 
+airways
+group by place
+order by avg_ratings desc
+
+3-Find the route(s) with the highest average value for money.
+
+select* from airways
+select top 1 avg(value_for_money) as avg_money,route from airways
+group by route
+order by avg_money desc
+
+
+4-Identify the month with the highest number of reviews.
+select top 1 month(date) as month_wise ,count(rating) as number_of_the_reviews
+from airways
+group by month(date)
+order by number_of_the_reviews desc
+select * from airways 
+
+5-Retrieve the details of the review with the longest content.
+select content ,rating from airways
+order by  rating desc
+
+6-Calculate the average ratings for each type of seat (seat_type).
+select avg(rating) as avg_ratings,seat_type from airways
+group by seat_type
+7-List the top 3 authors with the most reviews.
+select top 3 count(rating)as number_of_the_reviews ,author from airways
+group by author
+order by number_of_the_reviews desc
+
+8-Find the route with the highest average rating for cabin staff service.
+
+select top 1 route,avg(cabin_staff_service) as avg_cabin_staff_service from 
+airways
+group by route
+order by avg_cabin_staff_service  desc
+9-Identify the most recommended aircraft model.
+
+select * from airways
+select count(aircraft) as count_of_the_air_craft_model ,aircraft from airways
+group by aircraft
+order by count_of_the_air_craft_model desc
+
+10-Retrieve reviews where the ground servicdesce rating is lower than the cabin staff service rating.
+select rating,ground_service,cabin_staff_service from airways
+where ground_service<cabin_staff_service
+
+
+
+select count(route) as new ,route
+from airways
+group by route
+order by new desc
+
+select max(rating) as max_ratimg,min(rating) as min_rating,avg(rating) as avg_rating ,sum(rating) as toatl_rating,seat_type from airways
+group by seat_type
+select * from airways
