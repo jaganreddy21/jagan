@@ -1,0 +1,119 @@
+Easy Level:
+Retrieve all information about all cars in the dataset.
+select * from branded_cars
+How many cars are there in the dataset in total?
+select  count(brand_name) as total from branded_cars
+select
+List all the different brands of cars in the dataset.
+select * from branded_cars
+select count(brand_name) as counting,brand_name from branded_cars
+group by brand_name
+
+Show the cars that use gasoline as fuel.
+select brand_name from branded_cars
+where fuel_type='gas'
+
+What is the average size of engines in all cars?
+
+select brand_name,avg(engine_size) as avg_engine_size
+from branded_cars
+group by brand_name
+
+
+
+Medium Level:
+Display the cars with prices higher than $30,000.
+select brand_name from branded_cars
+where price_dollars>30000
+
+
+
+
+Which brand has the car with the highest horsepower, and how much is it?
+select top 1 brand_name,horse_power from branded_cars
+order by horse_power desc
+
+List the cars with engines located at the front.
+select brand_name,engine_location 
+from branded_cars
+where engine_location='front'
+
+How many cars are there for each type of fuel?
+select * from branded_cars
+select count(brand_name)as cars ,fuel_type from branded_cars
+group by fuel_type
+What is the average city mileage for cars with more than 4 cylinders?
+select avg(city_mileage)  as avg_milegae ,brand_name
+from branded_cars
+where cylinder_count>'four'
+group by brand_name
+
+#meaning insights as per the problem statement
+1.across the avg mileage of the brand cars like alfra_romero
+2.most of the people intersted to buy toyota.I my opinion imporve few features in toyota cars mostly likely chances all of them
+3.jaguar is the min mileage 12 or 14
+4.chervrolet will provided in min mileage around the 38
+5.most of the cars are the gas type only apporximately is 185 where as disel at 20
+6.here the price more than of $50000that car are jaguar,bmw,mercedes_benz
+
+Hard Level:
+For each brand, what is the average price of cars with rear-wheel drive?
+select * from branded_cars
+select avg(price_dollars) as avg_dollars ,brand_name from branded_cars
+group by brand_name
+
+
+Show cars with turbo aspiration
+select brand_name from branded_cars
+where Aspiration='turbo'
+
+
+Find the brand name and the lowest highway mileage for each brand.
+select * from branded_cars
+select brand_name ,min(city_mileage) min_mileage from branded_cars
+group  by brand_name
+order by min_mileage asc
+
+
+List cars with compression ratio between 9 and 10, inclusive.
+select brand_name from branded_cars
+where compression_ratio between 9 and 10
+
+
+
+Calculate the average engine size for cars priced over $50,000.
+select avg(engine_size) as avg_engine_size ,brand_name 
+from branded_cars
+where price_dollars>50000
+group by brand_name
+
+Show cars where the fuel system is 'direct injection'.
+
+select * from branded_cars
+
+
+Find the brand with the most cars in the dataset.
+select brand_name,count(brand_name) as count_number_cars from branded_cars
+group  by brand_name
+order by count_number_cars desc
+
+Retrieve cars with top RPM over 7000.
+select brand_name from branded_cars
+where top_rpm>7000
+
+Display cars with 4 doors and a front engine located.
+select brand_name from branded_cars
+where door_panel='four' and engine_location='front'
+
+
+List cars with the highest horsepower per dollar value.
+select top 1 brand_name,horse_power,price_dollars
+from branded_cars
+order by horse_power desc
+
+select * from branded_cars
+
+
+
+select * from branded_cars
+select * from airways
