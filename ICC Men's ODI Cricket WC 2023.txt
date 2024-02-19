@@ -1,0 +1,146 @@
+Easy Level:
+1.Retrieve all the columns for matches played in the ICC Men's ODI Cricket World Cup 2023."
+select * from mensodi
+
+2 "List all the unique teams that participated in the tournament."
+
+select count(distinct team1) from matches
+select count(distinct team2) from matches
+
+Display the total number of matches played in the World Cup.
+select * from matches
+select count(match_id) as number_of_mathces from mensodi
+select count(match_number) as number_of_matches from  matches
+
+Show the details of the match with the highest number of runs scored by the winning team.
+select * from mensodi
+select * from matches
+select count(winner_runs)as winners,team1 from matches
+group by team1
+
+
+
+Find out the city where the maximum number of matches were played.
+select count(*) as maximum_matches ,city
+from matches
+group by city
+order by maximum_matches desc
+
+
+select
+Medium Level:
+Display the matches where the toss winner chose to bat first.
+
+select match_number, toss_winner from matches
+where toss_decision='bat'
+
+select *  from matches
+
+
+List the top 3 players who were awarded the 'Player of the Match' most frequently.
+
+select top 3 winner_runs,player_of_match from matches
+where winner_runs is not null
+order by winner_runs desc
+
+ 
+Show the venues where the matches were played.
+
+
+select venue from  matches
+
+
+
+
+Find the total number of matches won by each team.
+
+select count(winner)  as winning ,team1 from matches
+group by team1
+order by winning desc
+
+
+Display the matches where the margin of victory (runs or wickets) was less than 10.
+select match_number,winner_runs,winner_wickets from matches
+where winner_runs<10 or winner_wickets<10
+
+
+Hard Level:
+Identify the teams that won the matches with a margin of more than 100 runs.
+
+
+select matches
+select * from matches
+select team1 ,match_number,winner,winner_runs
+from matches
+where winner_runs>100
+order by winner_runs desc
+
+
+List the matches where the toss winner ended up losing the match.
+select toss_winner
+select * from mensodi
+select * from matches
+select 
+Show the average runs scored in all matches.
+select avg(m1.runs_off_bat),m1.match_id  from mensodi m1
+inner join matches m2 on m1.match_id=m2.match_number
+group by m1.match_id
+
+Display the matches where the date of the match was after 1st January 2023.
+select * from matches
+select * from mensodi
+select m.date from matches  m
+inner join mensodi m1 on m.match_number=m1.match_id
+where date>01/1/2023
+select * from matches
+
+
+
+
+Identify the matches where the venue and city are different.
+select * from mensodi
+select *from matches
+select m.venue,m1.city from mensodi m
+inner join matches m1 on m.match_id=m1.match_number
+
+Advanced Level:
+Calculate the average runs scored by each team in the tournament.
+select * from matches
+select avg(m.runs_off_bat) as avg_runs ,team1 from mensodi m
+inner join matches m1 on m.match_id=m1.match_number
+group by team1
+
+
+select * from mensodi
+Find the team with the highest win percentage in the tournament.
+select team1 ,sum(winner_runs) as runs from matches
+
+where winner_runs is not null
+group by team1
+order by runs desc
+
+
+SELECT team1, 
+       SUM(winner_runs) AS TotalRuns,
+       SUM(winner_runs) * 100.0 / SUM(CASE WHEN winner_runs IS NOT NULL THEN 1 ELSE 0 END) AS WinPercentage
+FROM matches
+GROUP BY team1
+ORDER BY WinPercentage DESc
+
+Show the matches where the same umpire officiated more than once.
+select umpire1 ,count(*) as call
+from matches
+group by umpire1
+having count(*)>=1
+
+Identify the team with the longest winning streak.
+select team1,tea
+
+select *from matches
+select team1,winner_runs from matches
+order by winner_runs desc
+
+Calculate the total number of runs scored in the tournament.
+select* from mensodi
+select sum(runs_off_bat) as total_runs,batting_team from mensodi
+group by batting_team
